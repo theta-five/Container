@@ -2,46 +2,46 @@
 1.1 array
 
 1.1.1 使用须知
-	a)  包含头文件  #include<array>
-	b)  using std::array
-	c)  array中元素个数不可变
+a)  包含头文件  #include<array>
+b)  using std::array
+c)  array中元素个数不可变
 
 1.1.2 成员函数
-	a)  构造函数，array<T, SIZE> a; T为容器中元素类型，SIZE必须是常量。
-	b)  析构函数
-	c)  赋值运算符
+a)  构造函数，array<T, SIZE> a; T为容器中元素类型，SIZE必须是常量。
+b)  析构函数
+c)  赋值运算符
 
 1.1.3 元素接口
-	a)  at,  a.at(i), 获取下标为i的元素。
-	b)  operator[],  a[i], 获取下标为i的元素。
-	c)  front,  a.front() , 获取第一个元素。
-	d)  back,  a.back(),  获取最后一个元素。
-	e)  data,  a.data(),  获取数组地址。
+a)  at,  a.at(i), 获取下标为i的元素。
+b)  operator[],  a[i], 获取下标为i的元素。
+c)  front,  a.front() , 获取第一个元素。
+d)  back,  a.back(),  获取最后一个元素。
+e)  data,  a.data(),  获取数组地址。
 
 1.1.4 迭代器
-	a)  begin, a.begin(), 返回指向第一个元素的迭代器。
-	b)  end, a.end(), 返回最后一个元素后的迭代器。
-	c)  cbegin, a.cbegin(), 返回指向第一个元素的迭代器, c是const，表示不能修改容器。
-	d)  cend, a.cend(), 返回最后一个元素后的迭代器。
-	e)  rbegin, a.rbegin(), 返回指向第一个元素的反转迭代器, r是reverse，表示反转容器。
-	f)  rend, a.rend(), 返回最后一个元素后的反转迭代器。
-	g)  crbegin, a.crbegin(), 返回指向第一个元素的反转迭代器, c是const, 表示不能修改容器, r是reverse，表示反转容器。
-	h)  crend, a.crend(), 返回最后一个元素后的反转迭代器。
+a)  begin, a.begin(), 返回指向第一个元素的迭代器。
+b)  end, a.end(), 返回最后一个元素后的迭代器。
+c)  cbegin, a.cbegin(), 返回指向第一个元素的迭代器, c是const，表示不能修改容器。
+d)  cend, a.cend(), 返回最后一个元素后的迭代器。
+e)  rbegin, a.rbegin(), 返回指向第一个元素的反转迭代器, r是reverse，表示反转容器。
+f)  rend, a.rend(), 返回最后一个元素后的反转迭代器。
+g)  crbegin, a.crbegin(), 返回指向第一个元素的反转迭代器, c是const, 表示不能修改容器, r是reverse，表示反转容器。
+h)  crend, a.crend(), 返回最后一个元素后的反转迭代器。
 
 1.1.5 容量
-	a)  empty, a.empty(), 检查数组是否为空，为空返回true, 否则返回false。
-	b)  size, a.size(), 返回数组中元素个数。
-	c)  max_size, a.max_size(), 返回数组的容量，即最大可放元素个数。
+a)  empty, a.empty(), 检查数组是否为空，为空返回true, 否则返回false。
+b)  size, a.size(), 返回数组中元素个数。
+c)  max_size, a.max_size(), 返回数组的容量，即最大可放元素个数。
 
 1.1.6 操作
-	a)  fill, a.fill(const T& t); 用类型为T的t填充数组a。
-	b)  swap, a.swap(array& b), 交换两个数组内容。
+a)  fill, a.fill(const T& t); 用类型为T的t填充数组a。
+b)  swap, a.swap(array& b), 交换两个数组内容。
 
 1.1.7 非成员函数
-	a)  operator==， a == b, 判断两个数组是否相等，相等返回true, 否则返回false。
+a)  operator==， a == b, 判断两个数组是否相等，相等返回true, 否则返回false。
 
 1.1.8 案例
-	参考文件array.cpp
+参考文件array.cpp
 
 1.2 vector
 1.2.1 使用须知
@@ -100,6 +100,9 @@ i)  swap, a.swap(vector& b), 交换两个数组内容。
 1.2.7 非成员函数
 a)  operator==， a == b, 判断两个数组是否相等，相等返回true, 否则返回false。
 b) sort， sort(a.begin(), a.end(), [](T& a, T& b){return a > b;})
+
+1.2.8 案例
+参考文件vector.cpp
 
 
 1.3 deque
