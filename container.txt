@@ -43,7 +43,64 @@
 1.1.8 案例
 	参考文件array.cpp
 
-1.2 	vector
+1.2 vector
+1.2.1 使用须知
+a)  包含头文件  #include<vector>
+b)  using std::vector
+c)  vector中元素个数可变
+
+1.2.2 成员函数
+a)  构造函数，vector<T> a; T为容器中元素类型。
+i.  vector(); 默认构造，构造一个空的vector。
+ii. vector(size_type n);  vector(size_type n, const value_type& val);
+iii. vector(InputIterator first, InputIterator last);
+iv. vector(const vector& v);
+v. vector(initializer_list<value_type> il)
+b)  析构函数
+c)  赋值运算符 operator=
+d)  赋值  assign
+e) get_allocator  返回内存分配器对象
+
+1.2.3 元素接口
+a)  at,  a.at(i), 获取下标为i的元素，遇到无效索引会抛出异常。
+b)  operator[],  a[i], 获取下标为i的元素。
+c)  front,  a.front() , 获取第一个元素。
+d)  back,  a.back(),  获取最后一个元素。
+e)  data,  a.data(),  获取数组地址。
+
+1.2.4 迭代器
+a)  begin, a.begin(), 返回指向第一个元素的迭代器。
+b)  end, a.end(), 返回最后一个元素后的迭代器。
+c)  cbegin, a.cbegin(), 返回指向第一个元素的迭代器, c是const，表示不能修改容器。
+d)  cend, a.cend(), 返回最后一个元素后的迭代器。
+e)  rbegin, a.rbegin(), 返回指向第一个元素的反转迭代器, r是reverse，表示反转容器。
+f)  rend, a.rend(), 返回最后一个元素后的反转迭代器。
+g)  crbegin, a.crbegin(), 返回指向第一个元素的反转迭代器, c是const, 表示不能修改容器, r是reverse，表示反转容器。
+h)  crend, a.crend(), 返回最后一个元素后的反转迭代器。
+
+1.2.5 容量
+a)  empty, a.empty(), 检查数组是否为空，为空返回true, 否则返回false。
+b)  size, a.size(), 返回数组中元素个数。
+c)  max_size, a.max_size(), 返回数组的容量，即最大可放元素个数。
+d)  reserve, a.reserve(int num), 预留内存。
+e)  capacity,  a.capacity(), 返回数量容量。
+f)  shrink_to_fit,  a.shrink_to_fit(), 去除多余未使用的空间。
+
+1.2.6 操作
+a)  clear, a.fill(const T& t); 用类型为T的t填充数组a。
+b)  insert,  a.insert(), 插入数组元素。
+c) emplace,  a.emplace(), 在 vector 容器指定位置之前插入一个新的元素。
+d)  erase,  a.erase(), 删除元素。
+e)  push_back,  a.push_back(), 尾部插入新元素。
+f)  emplace_back,  a.emplace_back,  
+g)  pop_back,  a.pop_back(), 删除最后一个元素。
+h)  resize,  a.resize(),  重新给定内存空间。
+i)  swap, a.swap(vector& b), 交换两个数组内容。
+
+1.2.7 非成员函数
+a)  operator==， a == b, 判断两个数组是否相等，相等返回true, 否则返回false。
+b) sort， sort(a.begin(), a.end(), [](T& a, T& b){return a > b;})
+
 
 1.3 deque
 
